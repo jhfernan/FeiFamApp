@@ -1,22 +1,12 @@
-# app
+# Fei Family App
 
-> Fei Family App
+## Purpose
 
-## Build Setup
+Just an app I built to chronicle life in China
 
-``` bash
-# install dependencies
-$ npm run install
+## Planned Features
 
-# serve with hot reload at localhost:3000
-$ npm run dev
-
-# build for production and launch server
-$ npm run build
-$ npm run start
-
-# generate static project
-$ npm run generate
-```
-
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
++ Blog
++ Indexed information
++ How to section
++ BUdgeting help
