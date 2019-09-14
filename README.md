@@ -9,4 +9,4 @@ Just an app I built to chronicle life in China
 + Blog
 + Indexed information
 + How to section
-+ BUdgeting help
++ Budgeting help
