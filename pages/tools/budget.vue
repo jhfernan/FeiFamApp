@@ -30,7 +30,7 @@
 			</v-flex>
 
 			<v-flex xs12 lg6>
-				<spark-chart bar toggleType />
+				<spark-chart bar :data="budget.expenses" toggleType />
 			</v-flex>
 		</v-layout>
 	</v-container>
@@ -41,22 +41,12 @@ import BudgetTable from '~/components/BudgetTable.vue'
 import SparkChart from '~/components/SparkChart.vue'
 
 export default {
-	components: { BudgetTable, SparkChart },
-	data () {
-		return {
-			budget: {
-				income: [
-					{ name: 'Kaiwen Academy', amount: 15000 },
-					{ name: 'Ikids Teaching', amount: 1500 }
-				],
-				expenses: [
-					{ name: 'Rent', amount: 600 },
-					{ name: 'Utilities', amount: 500 },
-					{ name: 'Food', amount: 4000 }
-				]
-			}
-		}
+	async asyncData ({ app }) {
+		let { data } = await app.$axios.get('budget.json')
+		console.log(data)
+		return { budget: data }
 	},
+	components: { BudgetTable, SparkChart },
 	methods: {
 		sum (array) {
 			return array.reduce((a, b) => a + b.amount, 0)

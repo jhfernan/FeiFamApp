@@ -20,15 +20,8 @@
 				</v-sheet>
 			</v-card-text>
 			<v-card-text class="pt-0">
-				<div class="display-1 font-weight-thin">{{ title }}</div>
+				<div class="display-1 font-weight-medium">{{ title }}</div>
 			</v-card-text>
-
-			<div v-if="toggleType">
-				<v-divider></v-divider>
-				<v-card-actions class="justify-center">
-					<v-btn block text @click="bar = !bar">Toggle Chart: {{ !bar ? 'Bar' : 'Trend' }}</v-btn>
-				</v-card-actions>
-			</div>
 			<!-- <v-divider></v-divider>
 			<v-card-actions class="justify-center">
 				<v-btn block text>Go to Report</v-btn>
@@ -50,12 +43,14 @@ export default {
 			default: false
 		},
 		data: {
-			type: Object,
-			default: [
-				{ name: 'Rent', amount: 600 },
-				{ name: 'Utilities', amount: 500 },
-				{ name: 'Food', amount: 4000 }
-			]
+			type: Array,
+			default: function () {
+				return [
+					{ name: 'Rent', amount: 600 },
+					{ name: 'Utilities', amount: 500 },
+					{ name: 'Food', amount: 4000 }
+				]
+			}
 		},
 		tableColor: {
 			type: String,
@@ -64,11 +59,7 @@ export default {
 		title: {
 			type: String,
 			default: 'Expenses Quick Look'
-		},
-		toggleType: {
-			type: Boolean,
-			default: false
-		},
+		}
 	}
 }
 </script>

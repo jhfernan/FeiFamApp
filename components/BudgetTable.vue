@@ -34,11 +34,13 @@ export default {
 	},
 	props: {
 		budget: {
-			type: Object,
-			default: [
-				{ name: 'Kaiwen Academy', amount: 15000 },
-				{ name: 'Ikids Teaching', amount: 1500 }
-			]
+			type: Array,
+			default: function () {
+				return [
+					{ name: 'Kaiwen Academy', amount: 15000 },
+					{ name: 'Ikids Teaching', amount: 1500 }
+				]
+			}
 		},
 		headerColor: {
 			type: String,
