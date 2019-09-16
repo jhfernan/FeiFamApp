@@ -1,7 +1,9 @@
 <template>
 	<v-app>
 		<v-app-bar app dense dark hide-on-scroll>
-			<v-toolbar-title>Fei Family</v-toolbar-title>
+			<v-toolbar-title>
+				<nuxt-link to="/">Fei Family</nuxt-link>
+			</v-toolbar-title>
 			<div class="flex-grow-1"></div>
 			<v-btn icon>
 				<v-icon>mdi-dots-vertical</v-icon>
