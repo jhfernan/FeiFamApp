@@ -7,7 +7,7 @@
 						:value="values"
 						:auto-line-width="bar || false"
 						color="rgba(255, 255, 255, .7)"
-						height="120"
+						:height="height"
 						:line-width="2"
 						padding="30"
 						:smooth="!bar || false"
@@ -51,6 +51,10 @@ export default {
 					{ name: 'Food', amount: 4000 }
 				]
 			}
+		},
+		height: {
+			type: Number,
+			default: 100
 		},
 		tableColor: {
 			type: String,

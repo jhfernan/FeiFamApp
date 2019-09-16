@@ -13,7 +13,13 @@ export default {
 			{ hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
 		],
 		link: [
-			{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+			{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+			{
+				rel: 'stylesheet',
+				href: 'https://use.fontawesome.com/releases/v5.1.0/css/all.css',
+				integrity: 'sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt',
+				crossorigin: 'anonymous'
+			},
 		]
 	},
 
@@ -22,6 +28,7 @@ export default {
 
 	// Global CSS
 	css: [
+		'@/assets/app.styl',
 	],
 
 	// Plugins to load before mounting the App
@@ -45,7 +52,7 @@ export default {
 
 	// vuetify module configuration | https://github.com/nuxt-community/vuetify-module
 	vuetify: {
-		customVariables: ['~/assets/variables.scss'],
+		customVariables: ['~/assets/variables.styl'],
 		theme: {
 			dark: false,
 			themes: {
