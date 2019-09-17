@@ -4,7 +4,7 @@
 			<v-toolbar-title>
 				<nuxt-link class="white--text" to="/">Fei Family</nuxt-link>
 			</v-toolbar-title>
-			<div class="flex-grow-1"></div>
+			<v-spacer />
 			<v-btn icon>
 				<v-icon>mdi-dots-vertical</v-icon>
 			</v-btn>

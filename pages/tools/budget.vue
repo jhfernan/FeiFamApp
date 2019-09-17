@@ -58,7 +58,8 @@
 					</v-container>
 				</v-card-text>
 				<v-card-actions>
-					<div class="flex-grow-1"></div>
+					<v-btn color="red darken-1" text @click="deleteRow()">Delete Item</v-btn>
+					<v-spacer />
 					<v-btn color="blue darken-1" text @click="updateInfo()">Done</v-btn>
 				</v-card-actions>
 			</v-card>
@@ -78,6 +79,7 @@ export default {
 	components: { BudgetTable, SparkChart },
 	data () {
 		return {
+			updateIndex: 0,
 			updateName: '',
 			updateForm: {},
 			updateDialog: false
@@ -88,9 +90,14 @@ export default {
 			this.budget[dataName].push({ name: 'New', amount: 0  })
 		},
 		setUpdateInfo (type, index) {
+			this.updateIndex = index
 			this.updateName = type
 			this.updateForm = this.budget[type][index]
 			this.updateDialog = true
+		},
+		deleteRow () {
+			this.budget[this.updateName].splice(this.updateIndex, 1)
+			this.updateDialog = false
 		},
 		updateRowIncome (e) {
 			this.setUpdateInfo('income', e)
