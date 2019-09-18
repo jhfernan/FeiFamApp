@@ -85,6 +85,16 @@ export default {
 			updateDialog: false
 		}
 	},
+	head () {
+		return {
+			meta: [
+				{
+					hid: 'description',
+					name: 'description',
+					content: 'A simple budgeting tool we built to help plan' }
+			]
+		}
+	},
 	methods: {
 		addRow (dataName) {
 			this.budget[dataName].push({ name: 'New', amount: 0  })
@@ -111,6 +121,7 @@ export default {
 		sum (array) {
 			return array.reduce((a, b) => a + (b.amount ? b.amount : 0), 0)
 		}
-	}
+	},
+	middleware: 'guest',
 }
 </script>

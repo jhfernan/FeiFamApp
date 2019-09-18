@@ -1,3 +1,4 @@
+const config = require('./app.config')
 import colors from 'vuetify/es5/util/colors'
 
 export default {
@@ -46,9 +47,10 @@ export default {
 		'@nuxtjs/axios'
 	],
 
+	auth: config.auth,
+
 	// Axios module configuration | See https://axios.nuxtjs.org/options
-	axios: {
-	},
+	axios: config.axios,
 
 	// vuetify module configuration | https://github.com/nuxt-community/vuetify-module
 	vuetify: {

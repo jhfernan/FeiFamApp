@@ -11,8 +11,12 @@
 		"generate": "nuxt generate"
 	},
 	"dependencies": {
+		"@nuxtjs/auth": "^4.8.4",
 		"@nuxtjs/axios": "^5.3.6",
-		"nuxt": "^2.9.2"
+		"gravatar": "^1.8.0",
+		"nuxt": "^2.9.2",
+		"redirect-ssl": "^1.4.1",
+		"vue-markdown": "^2.2.4"
 	},
 	"devDependencies": {
 		"@nuxtjs/vuetify": "^1.8.3",
