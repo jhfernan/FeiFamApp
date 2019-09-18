@@ -73,7 +73,7 @@ import SparkChart from '~/components/SparkChart.vue'
 
 export default {
 	async asyncData ({ app }) {
-		let { data } = await app.$axios.get('budget.json')
+		let { data } = await app.$axios.get('/info/budget')
 		return { budget: data }
 	},
 	components: { BudgetTable, SparkChart },
