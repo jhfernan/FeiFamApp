@@ -1,20 +1,23 @@
 <template>
-	<v-app dark>
-		<h1 v-if="error.statusCode === 404">
-			{{ pageNotFound }}
-		</h1>
-		<h1 v-else>
-			{{ otherError }}
-		</h1>
-		<NuxtLink to="/">
-			Home page
-		</NuxtLink>
-	</v-app>
+	<v-container fluid fill-height>
+		<v-layout align-center justify-center>
+			<v-flex xs12 sm8 md6 lg3>
+				<v-card class="pt-3">
+					<v-img aspect-ratio="1" contain height="75" src="/images/logo.png"></v-img>
+					<v-card-text>
+						<div class="text-xs-center">
+							<h1 class="headline mr-1">{{ error.statusCode }}</h1>
+							<p>{{ error.message }}</p>
+						</div>
+					</v-card-text>
+				</v-card>
+			</v-flex>
+		</v-layout>
+	</v-container>
 </template>
 
 <script>
 export default {
-	layout: 'empty',
 	props: {
 		error: {
 			type: Object,
@@ -36,9 +39,3 @@ export default {
 	}
 }
 </script>
-
-<style scoped>
-h1 {
-	font-size: 20px;
-}
-</style>

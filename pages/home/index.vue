@@ -1,6 +1,6 @@
 <template>
 	<v-container>
-		<h1>Welcome Home <strong class="text-capitalize">{{ user.name }}</strong></h1>
+		<h1>Welcome Home <strong class="text-capitalize">Lol</strong></h1>
 		<v-layout row wrap>
 			<v-flex xs12 md8>
 				<v-card>
@@ -24,10 +24,10 @@ export default {
 	// },
 	data () {
 		return {
-			avatar: util.avatar(this.$auth.user.email, 100),
+			// avatar: util.avatar(this.$auth.user.email, 100),
 			form: {},
 			loading: false,
-			user: this.$auth.user,
+			// user: this.$auth.user,
 			util: util,
 			valid: true,
 		}
@@ -86,7 +86,7 @@ export default {
 	// 		}
 	// 	},
 	// },
-	middleware: 'member',
+	middleware: 'auth',
 	// async mounted () {
 	// 	this.updateCredentials()
 	// },

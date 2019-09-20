@@ -1,19 +1,19 @@
 <template>
 	<section>
-		<navbar v-if="!$auth.loggedIn" />
-		<backbar v-else />
+		<backbar v-if="$store.state.auth && $auth.loggedIn" />
+		<navbar v-else />
 		<v-snackbar top right v-model="$store.state.snack.available">
 			{{ $store.state.snack.text }}
-			<v-btn flat color="grey" @click.native="$store.dispatch('snack/toggleSnack')">Close</v-btn>
+			<v-btn color="grey" @click.native="$store.dispatch('snack/toggleSnack')" text>Close</v-btn>
 		</v-snackbar>
 	</section>
 </template>
 
 <script>
-import backbar from '~/components/layouts/backbar'
-import navbar from '~/components/layouts/navbar'
+import Backbar from '~/components/layouts/Backbar'
+import Navbar from '~/components/layouts/Navbar'
 
 export default {
-	components: { backbar, navbar }
+	components: { Backbar, Navbar }
 }
 </script>

@@ -15,12 +15,6 @@ export default {
 		],
 		link: [
 			{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-			{
-				rel: 'stylesheet',
-				href: 'https://use.fontawesome.com/releases/v5.1.0/css/all.css',
-				integrity: 'sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt',
-				crossorigin: 'anonymous'
-			},
 		]
 	},
 
@@ -34,6 +28,8 @@ export default {
 
 	// Plugins to load before mounting the App
 	plugins: [
+		'@/plugins/axios',
+		'@plugins/filters',
 	],
 
 	// Nuxt.js dev-modules
@@ -43,6 +39,7 @@ export default {
 
 	// Nuxt.js modules
 	modules: [
+		'@nuxtjs/auth',
 		// Doc: https://axios.nuxtjs.org/usage
 		'@nuxtjs/axios'
 	],

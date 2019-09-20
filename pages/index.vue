@@ -39,7 +39,6 @@ export default {
 					content: 'We are the Fei Family. We decided to move to China in hopes of growing as a family. What we got was one crazy big adventure. This app is all about our experience and mishaps along the way.' }
 			]
 		}
-	},
-	middleware: 'guest',
+	}
 }
 </script>
