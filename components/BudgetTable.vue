@@ -4,7 +4,7 @@
 			<v-toolbar-title v-html="title" />
 			<v-spacer />
 			<v-btn icon small v-if="crudData">
-				<v-icon small @click="addRow">fas fa-plus</v-icon>
+				<v-icon small @click="addRow">mdi-plus</v-icon>
 			</v-btn>
 		</v-toolbar>
 		<v-simple-table>

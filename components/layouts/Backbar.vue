@@ -6,7 +6,7 @@
 			</v-toolbar-title>
 			<v-spacer />
 			<v-app-bar-nav-icon @click="drawer = !drawer" />
-			<v-btn icon @click.stop="toggleMini">
+			<v-btn class="hidden-md-and-down" icon @click.stop="toggleMini">
 				<v-icon v-html="$store.state.nav.minivariant ? 'mdi-chevron-right' : 'mdi-chevron-left'" />
 			</v-btn>
 		</v-app-bar>

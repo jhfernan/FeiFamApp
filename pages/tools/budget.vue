@@ -2,7 +2,7 @@
 	<v-container>
 		<h1 class="my-3 text-center">Budgeting Tool</h1>
 		<v-layout>
-			<v-flex xs12 lg4>
+			<v-flex xs12 lg6>
 				<budget-table
 					crudData
 					@add="addRow('income')"
@@ -35,7 +35,7 @@
 				</v-container>
 			</v-flex>
 
-			<v-flex xs12 lg8>
+			<v-flex xs12 lg6>
 				<spark-chart bar :data="budget.expenses" :height="75" toggleType />
 			</v-flex>
 		</v-layout>

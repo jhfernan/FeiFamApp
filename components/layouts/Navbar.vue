@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<v-app-bar app clipped-right dark dense hide-on-scroll>
+		<v-app-bar app clipped-right color="primary" dark dense hide-on-scroll>
 			<v-btn class="hidden-md-and-down" exact :key="i" nuxt router text :to="link.to" v-for="(link, i) in links">
 				{{ link.name }}
 			</v-btn>
